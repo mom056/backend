@@ -7,7 +7,7 @@ require('dotenv').config();
 
 mongoose.connect(process.env.DB_KEY)
    
-const Router=require('./routes/estate')
+
 
 const app = express();
 
@@ -17,7 +17,6 @@ app.use(express.json());
 
 
 require('./routes')(app)
-app.use('/v1',Router);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
