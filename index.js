@@ -17,6 +17,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/test', (req, res) => {
+    res.send('Hello World');
+});
+
 // Include routes
 require('./routes')(app);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
