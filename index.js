@@ -5,8 +5,7 @@ const path = require('path');
 require('dotenv').config();
 
 mongoose.connect(process.env.DB_KEY, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+    // قم بإزالة useNewUrlParser و useUnifiedTopology
 }).then(() => {
     console.log('Connected to the database');
 }).catch((err) => {
